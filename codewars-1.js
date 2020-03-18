@@ -65,3 +65,35 @@ function moreZeros(s) {
   });
   return finalArr;
 }
+
+// Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below. Index 0 will be considered even.
+
+// For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
+
+// The input will be a lowercase string with no spaces.
+
+// Good luck!
+
+// If you like this Kata, please try:
+
+// Indexed capitalization
+
+// Even-odd disparity
+
+function capitalize(s) {
+  let sArr = s.split("");
+  let evenArr = [...sArr];
+  let oddArr = [...sArr];
+  for (let i = 0; i < sArr.length; i++) {
+    if (i % 2 === 0) {
+      console.log(sArr[i]);
+      evenArr[i] = sArr[i].toUpperCase();
+    } else {
+      oddArr[i] = sArr[i].toUpperCase();
+    }
+  }
+  let evenStr = evenArr.join("");
+  let oddStr = oddArr.join("");
+
+  return [evenStr, oddStr];
+}
