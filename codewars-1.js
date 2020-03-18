@@ -162,3 +162,53 @@ function goodVsEvil(good, evil) {
     return "Battle Result: No victor on this battle field";
   }
 }
+
+// Kata 5
+// The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array or list of integers:
+
+// maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])
+// // should be 6: [4, -1, 2, 1]
+// Easy case is when the list is made up of only positive numbers and the maximum sum is the sum of the whole array. If the list is made up of only negative numbers, return 0 instead.
+
+// Empty list is considered to have zero greatest sum. Note that the empty list or array is also a valid sublist/subarray.
+
+var maxSequence = function(arr) {
+  console.log(arr);
+  //   let contig =
+  let indexes = [0, 1];
+  let arrCompare = [];
+  for (let i = 0; i < arr.length + 1; i++) {
+    for (let j = i + 1; j < arr.length + 1; j++) {
+      console.log(i, j);
+      arrCompare.push({
+        total: arr.slice(i, j).reduce((a, b) => {
+          return a + b;
+        }),
+        start: i,
+        finish: j
+      });
+    }
+    for (let i = 0; i < arrCompare.length; i++) {
+      for (let j = i; j <= arrCompare.length; j++) {}
+    }
+  }
+  arrCompare = arrCompare.sort((a, b) => a.total - b.total);
+  console.log(arrCompare);
+  let finalObj = arrCompare[arrCompare.length - 1];
+  console.log(finalObj);
+  // ...
+  //   if(total){
+  if (arr[0] === undefined) {
+    return 0;
+  } else if (
+    arr.slice(finalObj.start, finalObj.finish).reduce((acc, el) => {
+      return acc + el;
+    }, 0) < 0
+  ) {
+    return 0;
+  } else {
+    return arr.slice(finalObj.start, finalObj.finish).reduce((acc, el) => {
+      return acc + el;
+    }, 0);
+  }
+};
