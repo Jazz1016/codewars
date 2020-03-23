@@ -312,3 +312,83 @@ function differenceInAges(ages) {
   let dif = ages[ages.length - 1] - ages[0];
   return [ages[0], ages[ages.length - 1], dif];
 }
+
+// The two oldest ages function/method needs to be completed. It should take an array of numbers as its argument and return the two highest numbers within the array. The returned value should be an array in the format [second oldest age, oldest age].
+
+// The order of the numbers passed in could be any order. The array will always include at least 2 items.
+
+// For example:
+
+// twoOldestAges( [1, 2, 10, 8] ) // should return [8, 10]
+
+// return the two oldest/oldest ages within the array of ages passed in.
+function twoOldestAges(ages) {
+  ages = ages.sort((a, b) => {
+    return a - b;
+  });
+  console.log(ages);
+  return [ages[ages.length - 2], ages[ages.length - 1]];
+}
+
+// Write a code that receives an array of numbers or strings, goes one by one through it while taking one value out, leaving one value in, taking, leaving, and back again to the beginning until all values are out.
+// It's like a circle of people who decide that every second person will leave it, until the last person is there. So if the last element of the array is taken, the first element that's still there, will stay.
+// The code returns a new re-arranged array with the taken values by their order. The first value of the initial array is always taken.
+
+// Examples:
+
+// var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//  // returns [1, 3, 5, 7, 9, 2, 6, 10, 8, 4]
+
+// var arr = ['this', 'code', 'is', 'right', 'the']
+//  // returns ['this', 'is', 'the', 'right', 'code']
+
+function yesNo(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!i % 2 === 0) {
+      arr.push(arr[i]);
+      arr.splice(i, 1);
+    }
+  }
+  return arr;
+}
+
+// Return the number (count) of vowels in the given string.
+
+// We will consider a, e, i, o, and u as vowels for this Kata.
+
+// The input string will only consist of lower case letters and/or spaces.
+
+function getCount(str) {
+  let strArr = str.split("");
+  console.log(strArr);
+  var vowelsCount = 0;
+  strArr.map(el => {
+    if (el === "a" || el === "e" || el === "i" || el === "o" || el === "u") {
+      vowelsCount++;
+    }
+  });
+
+  // enter your majic here
+
+  return vowelsCount;
+}
+
+// Welcome. In this kata, you are asked to square every digit of a number.
+
+// For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+
+// Note: The function accepts an integer and returns an integer
+
+function squareDigits(num) {
+  num = num.toString();
+  let numArr = num.split("");
+  console.log(numArr);
+  numArr = numArr.map(el => {
+    return +el * +el;
+  });
+  console.log(numArr);
+  return +numArr.join("");
+
+  //may the code be with you
+}
