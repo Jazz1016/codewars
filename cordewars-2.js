@@ -45,3 +45,4 @@ function foldTo(distance) {
 var isSquare = function(n) {
   return Number.isInteger(Math.sqrt(n));
 };
+let a = fadsmf;
