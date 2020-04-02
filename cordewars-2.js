@@ -45,4 +45,9 @@ function foldTo(distance) {
 var isSquare = function(n) {
   return Number.isInteger(Math.sqrt(n));
 };
-let a = fadsmf;
+
+// The code does not execute properly. Try to figure out why.
+
+function multiply(a, b) {
+  return a * b;
+}
