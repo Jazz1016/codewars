@@ -42,7 +42,7 @@ function foldTo(distance) {
 // isSquare(25) returns  true
 // isSquare(26) returns  false
 
-var isSquare = function(n) {
+var isSquare = function (n) {
   return Number.isInteger(Math.sqrt(n));
 };
 
@@ -160,7 +160,32 @@ function convertMyDollars(usd, currency) {
   ) {
     return `You now have ${usd * CONVERSION_RATES[currency]} of ${currency}.`;
   } else {
-    return `You now have ${usd *
-      parseInt(CONVERSION_RATES[currency], 2)} of ${currency}.`;
+    return `You now have ${
+      usd * parseInt(CONVERSION_RATES[currency], 2)
+    } of ${currency}.`;
   }
+}
+
+// Complete the solution so that the function will break up camel casing, using a space between words.
+
+// Example
+// solution("camelCasing")  ==  "camel Casing"
+
+// complete the function
+function solution(string) {
+  let strArr = string.split("");
+  let indexes = [];
+  console.log(strArr);
+  for (let i = 0; i < strArr.length; i++) {
+    if (strArr[i] == strArr[i].toUpperCase()) {
+      indexes.push(i - 1);
+    }
+  }
+  let counter = 1;
+  indexes.map((el) => {
+    strArr.splice(el + counter, 0, " ");
+    counter++;
+  });
+  console.log(indexes);
+  return strArr.join("");
 }
