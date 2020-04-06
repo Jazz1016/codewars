@@ -189,3 +189,47 @@ function solution(string) {
   console.log(indexes);
   return strArr.join("");
 }
+// Task
+// Given a positive integer as input, return the output as a string in the following format:
+
+// Each element, corresponding to a digit of the number, multiplied by a power of 10 in such a way that with the sum of these elements you can obtain the original number.
+
+// Examples
+// Input	Output
+// 0	""
+// 56	"5*10+6"
+// 60	"6*10"
+// 999	"9*100+9*10+9"
+// 10004	"1*10000+4"
+// Note: input >= 0
+
+function simplify(number) {
+  number = number.toString();
+  number = number.split("");
+  number = number.reverse();
+  let numberCopy = [...number];
+  let indexes = [];
+  let repeat = "0";
+  for (let i = 0; i < number.length; i++) {
+    if (number[i] === "0") {
+      indexes.push(i);
+    } else {
+      number[i] = `${number[i]}*1${repeat.repeat(i)}+`;
+    }
+  }
+  console.log(number, numberCopy);
+  number[0] = numberCopy[0];
+  let counter = 0;
+  indexes.map((el) => {
+    number.splice(el - counter, 1);
+    counter++;
+  });
+  number = number.reverse();
+  number = number.join("");
+  number = number.split("");
+  if (number[number.length - 1] === "+") {
+    number.pop();
+  }
+  return number.join("");
+  console.log(number);
+}
