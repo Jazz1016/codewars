@@ -322,3 +322,20 @@ function hydrate(s) {
     return `${total} glasses of water`;
   }
 }
+
+// Write a function reverse which reverses a list (or in clojure's case, any list-like data structure)
+
+// (the dedicated builtin(s) functionalities are deactivated)
+
+reverse = function (array) {
+  console.log(array);
+  let arrClone = [...array];
+  for (let i = 0; i < array.length; i++) {
+    console.log(i);
+    array[i] = array[array.length - i];
+  }
+  console.log(array);
+  array.shift();
+  console.log(array);
+  return array;
+};
