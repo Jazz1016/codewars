@@ -209,3 +209,28 @@ function growingPlant(upSpeed, downSpeed, desiredHeight) {
   console.log(upSpeed, downSpeed, desiredHeight);
   console.log((desiredHeight / upSpeed) * downSpeed);
 }
+
+// Your task is to write a function, which takes two arguments and returns a sequence. First argument is a sequence of values, second is multiplier. The function should filter all non-numeric values and multiply the rest by given multiplier.
+
+function multiplyAndFilter(array, multiplier) {
+  console.log(array, multiplier);
+  for (let i = 0; i < array.length; i++) {
+    console.log(array);
+    if (typeof array[i] === "number") {
+      array[i] = array[i] * multiplier;
+    } else {
+      console.log(array[i]);
+      array[i] = "x";
+    }
+  }
+  if (array[1] === 0 || array[1] === undefined) {
+    return array;
+  } else {
+    return array.filter((el) => {
+      if (typeof el === "number" || el === 0) {
+        console.log(el);
+        return el;
+      }
+    });
+  }
+}
