@@ -267,3 +267,20 @@ function highAndLow(numbers) {
 
   return `${sortedArr1.shift()} ${sortedArr.pop()}`;
 }
+
+// Debug   function getSumOfDigits that takes positive integer to calculate sum of it's digits. Assume that argument is an integer.
+
+// Example
+// 123  => 6
+// 223  => 7
+// 1337 => 15
+
+function getSumOfDigits(integer) {
+  let sum = 0;
+  var digits = Math.floor(integer).toString();
+  for (let ix = 0; ix < digits.length; ix++) {
+    console.log(digits[ix]);
+    sum = sum + +digits[ix];
+  }
+  return sum;
+}
