@@ -368,3 +368,26 @@ function generateIntegers(m, n) {
   }
   return arr;
 }
+
+// Take 2 strings s1 and s2 including only letters from ato z. Return a new sorted string, the longest possible, containing distinct letters,
+
+// each taken only once - coming from s1 or s2.
+// Examples:
+// a = "xyaabbbccccdefww"
+// b = "xxxxyyyyabklmopq"
+// longest(a, b) -> "abcdefklmopqwxy"
+
+// a = "abcdefghijklmnopqrstuvwxyz"
+// longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+
+function longest(s1, s2) {
+  console.log(s1, s2);
+  let string = s1 + s2;
+  let array = string.split("");
+  array = array.filter((letter, i) => {
+    return array.indexOf(letter) === i;
+  });
+  array = array.sort();
+  console.log(array);
+  return array.join("");
+}
