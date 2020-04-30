@@ -391,3 +391,25 @@ function longest(s1, s2) {
   console.log(array);
   return array.join("");
 }
+
+// Given an array, find the integer that appears an odd number of times.
+
+// There will always be only one integer that appears an odd number of times.
+
+function findOdd(A) {
+  //happy coding!
+  console.log(A);
+  let counter = 0;
+  for (let i = 0; i < A.length; i++) {
+    for (let j = i + 1; j < A.length; j++) {
+      //       console.log(A[i], A[j])
+      if (A[i] === A[j]) {
+        let saver = A[i];
+        console.log(saver, A[i]);
+        counter++;
+      }
+    }
+  }
+  console.log(counter);
+  return 0;
+}
