@@ -265,3 +265,54 @@ function getNaughtyNames(people){
   }
   return names
 }
+
+// Build Tower
+// Build Tower by the following given argument:
+// number of floors (integer and always greater than 0).
+
+// Tower block is represented as *
+
+// Python: return a list;
+// JavaScript: returns an Array;
+// C#: returns a string[];
+// PHP: returns an array;
+// C++: returns a vector<string>;
+// Haskell: returns a [String];
+// Ruby: returns an Array;
+// Lua: returns a Table;
+// Have fun!
+
+// for example, a tower of 3 floors looks like below
+
+// [
+//   '  *  ', 
+//   ' *** ', 
+//   '*****'
+// ]
+// and a tower of 6 floors looks like below
+
+// [
+//   '     *     ', 
+//   '    ***    ', 
+//   '   *****   ', 
+//   '  *******  ', 
+//   ' ********* ', 
+//   '***********'
+// ]
+// Go challenge Build Tower Advanced once you have finished this :)
+
+function towerBuilder(nFloors) {
+  //   console.log(nFloors)
+    let arr = ["*"]
+    let star = "***"
+    for(let i = 1; i < nFloors; i++){
+      arr.push(star)
+      star += "**"
+    }
+    for(let i = 0; i < arr.length; i++){
+      for(let j = 0; j < arr.length - 1 - i; j++){
+      arr[i] = ' ' + arr[i] + ' '
+      }
+    }
+    return arr
+  }
