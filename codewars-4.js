@@ -533,3 +533,75 @@ function nbDig(n, d) {
   }
   return counter;
 }
+
+// If　a = 1, b = 2, c = 3 ... z = 26
+
+// Then l + o + v + e = 54
+
+// and f + r + i + e + n + d + s + h + i + p = 108
+
+// So friendship is twice stronger than love :-)
+
+// The input will always be in lowercase and never be empty.
+
+function wordsToMarks(string){
+  let array = string.split("")
+  let counter = 0
+  for(let i = 0; i < array.length; i++){
+      if(array[i] === 'a'){
+        counter = counter + 1
+      }
+      if(array[i] === 'b'){
+        counter = counter + 2
+      }      if(array[i] === 'c'){
+        counter = counter + 3
+      }      if(array[i] === 'd'){
+        counter = counter + 4
+      }      if(array[i] === 'e'){
+        counter = counter + 5
+      }      if(array[i] === 'f'){
+        counter = counter + 6
+      }      if(array[i] === 'g'){
+        counter = counter + 7
+      }      if(array[i] === 'h'){
+        counter = counter + 8
+      }      if(array[i] === 'i'){
+        counter = counter + 9
+      }      if(array[i] === 'j'){
+        counter = counter + 10
+      }      if(array[i] === 'k'){
+        counter = counter + 11
+      }      if(array[i] === 'l'){
+        counter = counter + 12
+      }      if(array[i] === 'm'){
+        counter = counter + 13
+      }      if(array[i] === 'n'){
+        counter = counter + 14
+      }      if(array[i] === 'o'){
+        counter = counter + 15
+      }      if(array[i] === 'p'){
+        counter = counter + 16
+      }      if(array[i] === 'q'){
+        counter = counter + 17
+      }      if(array[i] === 'r'){
+        counter = counter + 18
+      }      if(array[i] === 's'){
+        counter = counter + 19
+      }      if(array[i] === 't'){
+        counter = counter + 20
+      }      if(array[i] === 'u'){
+        counter = counter + 21
+      }      if(array[i] === 'v'){
+        counter = counter + 22
+      }      if(array[i] === 'w'){
+        counter = counter + 23
+      }      if(array[i] === 'x'){
+        counter = counter + 24
+      }      if(array[i] === 'y'){
+        counter = counter + 25
+      }      if(array[i] === 'z'){
+        counter = counter + 26
+      }
+  }
+  return counter
+}
