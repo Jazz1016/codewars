@@ -659,3 +659,25 @@ function averages(numbers) {
   arr.pop()
   return arr
 }
+
+// Given a string made up of letters a, b, and/or c, switch the position of letters a and b (change a to b and vice versa). Leave any incidence of c untouched.
+
+// Example:
+
+// 'acb' --> 'bca'
+// 'aabacbaa' --> 'bbabcabb'
+
+function switcheroo(x){
+  let letterArr = x.split("")
+console.log(letterArr)
+  let arr = letterArr.map((el, i)=>{
+    if(el === 'a'){
+      return 'b'
+    } else if (el === 'b'){
+      return 'a'
+    } else {
+      return el
+    }
+  })
+  return arr.join("")
+}
