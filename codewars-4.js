@@ -681,3 +681,14 @@ console.log(letterArr)
   })
   return arr.join("")
 }
+
+// Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+function descendingOrder(n){
+  let array = n.toString().split("")
+  array = array.map(el => {
+    return +el
+  })
+  let final = +array.sort().reverse().join("")
+  return final
+}
