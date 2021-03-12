@@ -692,3 +692,16 @@ function descendingOrder(n){
   let final = +array.sort().reverse().join("")
   return final
 }
+
+// Write a function that takes a positive integer n, sums all the cubed values from 1 to n, and returns that sum.
+
+// Assume that the input n will always be a positive integer.
+
+function sumCubes(n){
+  console.log(n)
+  let value = 0
+  for(let i = 0; i <= n; i++){
+    value += i*i*i
+  }
+  return value
+}
