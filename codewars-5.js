@@ -56,3 +56,29 @@ function greet(name){
 function reverseWords(str){  
   return str.split(" ").reverse().join(" ")
 }
+
+// You will be given a string with sets of characters, (i.e. words), seperated by between one and three spaces (inclusive).
+
+// Looking at the first letter of each word (case insensitive-"A" and "a" should be treated the same), you need to determine whether it falls into the positive/first half of the alphabet ("a"-"m") or the negative/second half ("n"-"z").
+
+// Return True/true if there are more (or equal) positive words than negative words, False/false otherwise.
+
+function connotation(str) {
+  const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+  let count = 0
+  let strArr = str.split(" ")
+  
+  for(let i = 0; i < strArr.length; i++){
+    if (alphabet.indexOf(strArr[i].charAt(0).toLowerCase()) <= 12) {
+      count ++
+    } else {
+      count --
+    }
+  }
+  return count >= 0 ? true : false
+}
+
+
+return str.split(" ").filter(el => el.length > 0 ? true : false).reduce((final, el) => { 
+  return alphabet.indexOf(el.charAt(0).toLowerCase()) <= 12 ? final + 1 :  final - 1
+}, 0) >= 0 ? true : false
