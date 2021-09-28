@@ -25,7 +25,7 @@ function stringy(size) {
     }
     return str
   }
-
+  
 //   You take your son to the forest to see the monkeys. You know that there are a certain number there (n), but your son is too young to just appreciate the full number, he has to start counting them from 1.
 
 // As a good parent, you will sit and count with him. Given the number (n), populate an array with all numbers up to and including that number, but excluding zero.
@@ -33,9 +33,20 @@ function stringy(size) {
 function monkeyCount(n) {
   console.log(n)
   let arr = []
-  
   for(let i = 1; i <= n; i++){
     arr.push(i)
   }
   return arr
+}
+
+// Jenny has written a function that returns a greeting for a user. However, she's in love with Johnny, and would like to greet him slightly different. She added a special case to her function, but she made a mistake.
+
+// Can you help her?
+
+function greet(name){
+  if(name === "Johnny") {
+    return "Hello, my love!";
+  } else {
+    return "Hello, " + name + "!";
+  }
 }
