@@ -82,3 +82,14 @@ function connotation(str) {
 return str.split(" ").filter(el => el.length > 0 ? true : false).reduce((final, el) => { 
   return alphabet.indexOf(el.charAt(0).toLowerCase()) <= 12 ? final + 1 :  final - 1
 }, 0) >= 0 ? true : false
+
+// Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+var summation = function (num) {
+  let count = 0
+  for(let i = 0; i <= num; i++){
+    count += i
+  }
+  
+  return count
+}
