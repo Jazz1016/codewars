@@ -108,3 +108,18 @@ for(let i = 0; i <= n; i++){
 }
 return count
 }
+
+// Create a function that changes all the vowels (excluding y) in a string, and changes them all to the same vowel. The first parameter of the function is the string, and the second is the vowel that all the vowels in the string are being changed to.
+
+function vowelChange(str, vow) {
+  let vowels = "aeiou"
+  let newStr = ""
+  for (let i = 0; i < str.length; i++){
+    let char = str.charAt(i)
+    if (vowels.includes(char.toLowerCase())) {
+      newStr.push(vow)
+    } else {
+      newStr.push(char)
+    }
+  }
+}
