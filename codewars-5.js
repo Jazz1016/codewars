@@ -109,7 +109,8 @@ for(let i = 0; i <= n; i++){
 return count
 }
 
-// Create a function that changes all the vowels (excluding y) in a string, and changes them all to the same vowel. The first parameter of the function is the string, and the second is the vowel that all the vowels in the string are being changed to.
+// Create a function that changes all the vowels (excluding y) in a string, and changes them all to the same vowel. 
+// The first parameter of the function is the string, and the second is the vowel that all the vowels in the string are being changed to.
 
 function vowelChange(str, vow) {
   let vowels = "aeiou"
@@ -117,9 +118,20 @@ function vowelChange(str, vow) {
   for (let i = 0; i < str.length; i++){
     let char = str.charAt(i)
     if (vowels.includes(char.toLowerCase())) {
-      newStr.push(vow)
+      newStr += vow
     } else {
-      newStr.push(char)
+      newStr += char
     }
+  }
+  return newStr
+}
+
+// In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+
+function makeNegative(num) {
+  if (num < 0) {
+    return num
+  } else {
+    return num * -1
   }
 }
