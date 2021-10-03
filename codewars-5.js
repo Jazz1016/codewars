@@ -135,3 +135,31 @@ function makeNegative(num) {
     return num * -1
   }
 }
+
+// This kata is the first of a sequence of four about "Squared Strings".
+// You are given a string of n lines, each substring being n characters long: For example:
+// s = "abcd\nefgh\nijkl\nmnop"
+// We will study some transformations of this square of strings.
+
+function vertMirror(strng) {
+  let arr = strng.split('\n')
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].split("").reverse().join("")
+    console.log(arr[i])
+  }
+return arr.join('\n')
+}
+function horMirror(strng) {
+  let arr = strng.split('\n')
+  let newArr = []
+  for (let i = arr.length - 1; i >= 0; i--){
+    newArr.push(arr[i])
+  }
+console.log(newArr)
+return newArr.join('\n')
+}
+function oper(fct, s) {
+console.log(fct, s)
+
+return fct(s)
+}
