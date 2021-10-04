@@ -163,3 +163,23 @@ console.log(fct, s)
 
 return fct(s)
 }
+
+// Tranform of input array of zeros and ones to array in which counts number of continuous ones. If there is none, return an empty array
+
+function onesCounter(input) {
+  let countArr = []
+  let count = 0
+  
+  for (let i = 0; i < input.length; i++){
+    if (input[i] === 1) {
+      count ++
+    } else if (input[i] === 0 && count > 0) {
+      countArr.push(count)
+      count = 0      
+    }
+  }
+  if (count > 0) {
+    countArr.push(count)
+  }
+  return countArr
+}
