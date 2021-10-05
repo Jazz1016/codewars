@@ -189,5 +189,9 @@ function onesCounter(input) {
 // Return True if yes, False otherwise :)
 
 export function hero(bullets: number, dragons: number): boolean {
-  return true;
+  if (dragons * 2 <= bullets){
+    return true
+  } else {
+    return false
+  }
 }
