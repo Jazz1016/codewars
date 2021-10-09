@@ -1,6 +1,4 @@
-function loopArr(arr, direction, steps) {
-    
-}
+function loopArr(arr, direction, steps) {}
 
 // write me a function stringy that takes a size and returns a string of alternating '1s' and '0s'.
 
@@ -15,36 +13,36 @@ function loopArr(arr, direction, steps) {
 // The size will always be positive and will only use whole numbers.
 
 function stringy(size) {
-    let str = ""
-    for(i = 0; i < size; i++){
-      if (i % 2 === 0) {
-        str += "1"
-      } else {
-        str += "0"
-      }
+  let str = "";
+  for (i = 0; i < size; i++) {
+    if (i % 2 === 0) {
+      str += "1";
+    } else {
+      str += "0";
     }
-    return str
   }
-  
+  return str;
+}
+
 //   You take your son to the forest to see the monkeys. You know that there are a certain number there (n), but your son is too young to just appreciate the full number, he has to start counting them from 1.
 
 // As a good parent, you will sit and count with him. Given the number (n), populate an array with all numbers up to and including that number, but excluding zero.
 
 function monkeyCount(n) {
-  console.log(n)
-  let arr = []
-  for(let i = 1; i <= n; i++){
-    arr.push(i)
+  console.log(n);
+  let arr = [];
+  for (let i = 1; i <= n; i++) {
+    arr.push(i);
   }
-  return arr
+  return arr;
 }
 
 // Jenny has written a function that returns a greeting for a user. However, she's in love with Johnny, and would like to greet him slightly different. She added a special case to her function, but she made a mistake.
 
 // Can you help her?
 
-function greet(name){
-  if(name === "Johnny") {
+function greet(name) {
+  if (name === "Johnny") {
     return "Hello, my love!";
   } else {
     return "Hello, " + name + "!";
@@ -53,8 +51,8 @@ function greet(name){
 
 // Complete the solution so that it reverses all of the words within the string passed in.
 
-function reverseWords(str){  
-  return str.split(" ").reverse().join(" ")
+function reverseWords(str) {
+  return str.split(" ").reverse().join(" ");
 }
 
 // You will be given a string with sets of characters, (i.e. words), seperated by between one and three spaces (inclusive).
@@ -64,75 +62,108 @@ function reverseWords(str){
 // Return True/true if there are more (or equal) positive words than negative words, False/false otherwise.
 
 function connotation(str) {
-  const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-  let count = 0
-  let strArr = str.split(" ")
-  
-  for(let i = 0; i < strArr.length; i++){
+  const alphabet = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+  ];
+  let count = 0;
+  let strArr = str.split(" ");
+
+  for (let i = 0; i < strArr.length; i++) {
     if (alphabet.indexOf(strArr[i].charAt(0).toLowerCase()) <= 12) {
-      count ++
+      count++;
     } else {
-      count --
+      count--;
     }
   }
-  return count >= 0 ? true : false
+  return count >= 0 ? true : false;
 }
 
-
-return str.split(" ").filter(el => el.length > 0 ? true : false).reduce((final, el) => { 
-  return alphabet.indexOf(el.charAt(0).toLowerCase()) <= 12 ? final + 1 :  final - 1
-}, 0) >= 0 ? true : false
+return str
+  .split(" ")
+  .filter((el) => (el.length > 0 ? true : false))
+  .reduce((final, el) => {
+    return alphabet.indexOf(el.charAt(0).toLowerCase()) <= 12
+      ? final + 1
+      : final - 1;
+  }, 0) >= 0
+  ? true
+  : false;
 
 // Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
 
 var summation = function (num) {
-  let count = 0
-  for(let i = 0; i <= num; i++){
-    count += i
+  let count = 0;
+  for (let i = 0; i <= num; i++) {
+    count += i;
   }
-  
-  return count
-}
+
+  return count;
+};
 
 // Count the number of divisors of a positive integer n.
 
 // Random tests go up to n = 500000.
 
-function getDivisorsCnt(n){
-  console.log(n)
-let count = 0
-for(let i = 0; i <= n; i++){
-  if (n % i == 0) {
-    count++
+function getDivisorsCnt(n) {
+  console.log(n);
+  let count = 0;
+  for (let i = 0; i <= n; i++) {
+    if (n % i == 0) {
+      count++;
+    }
   }
-}
-return count
+  return count;
 }
 
-// Create a function that changes all the vowels (excluding y) in a string, and changes them all to the same vowel. 
+// Create a function that changes all the vowels (excluding y) in a string, and changes them all to the same vowel.
 // The first parameter of the function is the string, and the second is the vowel that all the vowels in the string are being changed to.
 
 function vowelChange(str, vow) {
-  let vowels = "aeiou"
-  let newStr = ""
-  for (let i = 0; i < str.length; i++){
-    let char = str.charAt(i)
+  let vowels = "aeiou";
+  let newStr = "";
+  for (let i = 0; i < str.length; i++) {
+    let char = str.charAt(i);
     if (vowels.includes(char.toLowerCase())) {
-      newStr += vow
+      newStr += vow;
     } else {
-      newStr += char
+      newStr += char;
     }
   }
-  return newStr
+  return newStr;
 }
 
 // In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
 
 function makeNegative(num) {
   if (num < 0) {
-    return num
+    return num;
   } else {
-    return num * -1
+    return num * -1;
   }
 }
 
@@ -142,46 +173,46 @@ function makeNegative(num) {
 // We will study some transformations of this square of strings.
 
 function vertMirror(strng) {
-  let arr = strng.split('\n')
+  let arr = strng.split("\n");
   for (let i = 0; i < arr.length; i++) {
-    arr[i] = arr[i].split("").reverse().join("")
-    console.log(arr[i])
+    arr[i] = arr[i].split("").reverse().join("");
+    console.log(arr[i]);
   }
-return arr.join('\n')
+  return arr.join("\n");
 }
 function horMirror(strng) {
-  let arr = strng.split('\n')
-  let newArr = []
-  for (let i = arr.length - 1; i >= 0; i--){
-    newArr.push(arr[i])
+  let arr = strng.split("\n");
+  let newArr = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    newArr.push(arr[i]);
   }
-console.log(newArr)
-return newArr.join('\n')
+  console.log(newArr);
+  return newArr.join("\n");
 }
 function oper(fct, s) {
-console.log(fct, s)
+  console.log(fct, s);
 
-return fct(s)
+  return fct(s);
 }
 
 // Tranform of input array of zeros and ones to array in which counts number of continuous ones. If there is none, return an empty array
 
 function onesCounter(input) {
-  let countArr = []
-  let count = 0
-  
-  for (let i = 0; i < input.length; i++){
+  let countArr = [];
+  let count = 0;
+
+  for (let i = 0; i < input.length; i++) {
     if (input[i] === 1) {
-      count ++
+      count++;
     } else if (input[i] === 0 && count > 0) {
-      countArr.push(count)
-      count = 0      
+      countArr.push(count);
+      count = 0;
     }
   }
   if (count > 0) {
-    countArr.push(count)
+    countArr.push(count);
   }
-  return countArr
+  return countArr;
 }
 
 // A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?
@@ -189,9 +220,27 @@ function onesCounter(input) {
 // Return True if yes, False otherwise :)
 
 export function hero(bullets: number, dragons: number): boolean {
-  if (dragons * 2 <= bullets){
-    return true
+  if (dragons * 2 <= bullets) {
+    return true;
   } else {
-    return false
+    return false;
   }
 }
+
+// Write a function that checks whether all elements in an array are square numbers. The function should be able to take any number of array elements.
+
+// Your function should return true if all elements in the array are square numbers and false if not.
+
+// An empty array should return undefined. You can assume that all array elements will be positive integers.
+
+var isSquare = function (arr) {
+  if (arr.length === 0) {
+    return undefined;
+  }
+  for (let i = 0; i < arr.length; i++) {
+    if (Math.sqrt(arr[i]) % 1 !== 0) {
+      return false;
+    }
+  }
+  return true;
+};
