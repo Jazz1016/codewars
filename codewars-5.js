@@ -263,12 +263,35 @@ var isSquare = function (arr) {
 // Have fun :)
 
 function evenOrOdd(str) {
-  //   console.log(str)
+  let even = 0;
+  let odd = 0;
   let arr = str.split("");
 
   for (let i = 0; i < arr.length; i++) {
     console.log(parseInt(arr[i]));
     if (parseInt(arr[i]) % 2 === 0) {
+      even += parseInt(arr[i]);
+    } else {
+      odd += parseInt(arr[i]);
     }
   }
+
+  if (even > odd) {
+    return "Even is greater than Odd";
+  } else if (odd > even) {
+    return "Odd is greater than Even";
+  } else {
+    return "Even and Odd are the same";
+  }
+}
+
+// Write a function named sumDigits which takes a number as input and returns the sum of the absolute value of each of the number's decimal digits.
+
+function sumDigits(number) {
+  let str = `${number}`;
+  let num = 0;
+  for (let i = 0; i < str.length; i++) {
+    num += parseInt(str[i]);
+  }
+  return num;
 }
