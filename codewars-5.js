@@ -289,9 +289,16 @@ function evenOrOdd(str) {
 
 function sumDigits(number) {
   let str = `${number}`;
+  if (number < 0) {
+    console.log(str.substring(1))
+    str = str.substring(1)
+  }
+  
   let num = 0;
   for (let i = 0; i < str.length; i++) {
+    console.log(number, parseInt(str[i]))
     num += parseInt(str[i]);
   }
+  console.log(num)
   return num;
 }
