@@ -326,3 +326,20 @@ function flyBy(lamps, drone) {
 }
 
 flyBy(("xxxxxx", "====T"), "ooooox");
+
+// Your task is to remove all consecutive duplicate words from a string, leaving only first words entries. For example:
+
+// "alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta"
+
+// --> "alpha beta gamma delta alpha beta gamma delta"
+
+const removeConsecutiveDuplicates = (s) => {
+  console.log(s);
+  let arr = s.split(" ");
+  let word = "";
+  let final = "";
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] === arr[i - 1] ? null : (final += ` ${arr[i]}`);
+  }
+  return final.substring(1);
+};
