@@ -333,16 +333,16 @@ flyBy(("xxxxxx", "====T"), "ooooox");
 
 // --> "alpha beta gamma delta alpha beta gamma delta"
 
-const removeConsecutiveDuplicates = (s) => {
-  console.log(s);
-  let arr = s.split(" ");
-  let word = "";
-  let final = "";
-  for (let i = 0; i < arr.length; i++) {
-    arr[i] === arr[i - 1] ? null : (final += ` ${arr[i]}`);
-  }
-  return final.substring(1);
-};
+// const removeConsecutiveDuplicates = (s) => {
+//   console.log(s);
+//   let arr = s.split(" ");
+//   let word = "";
+//   let final = "";
+//   for (let i = 0; i < arr.length; i++) {
+//     arr[i] === arr[i - 1] ? null : (final += ` ${arr[i]}`);
+//   }
+//   return final.substring(1);
+// };
 
 // Convert number to reversed array of digits
 // Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
@@ -351,9 +351,11 @@ const removeConsecutiveDuplicates = (s) => {
 // 348597 => [7,9,5,8,4,3]
 // 0 => [0]
 
-function digitize(n) {
-  return `${n}`
-    .split("")
-    .reverse()
-    .map((el) => +el);
-}
+// function digitize(n) {
+//   return `${n}`
+//     .split("")
+//     .reverse()
+//     .map((el) => +el);
+// }
+
+// JAM LEA
