@@ -374,3 +374,44 @@ flyBy(("xxxxxx", "====T"), "ooooox");
 function friend(friends) {
   return friends.filter((word) => word.length === 4);
 }
+
+// When provided with a String, capitalize all vowels
+
+// For example:
+
+// Input : "Hello World!"
+
+// Output : "HEllO WOrld!"
+
+// Note: Y is not a vowel in this kata.
+
+function swap(string) {
+  console.log(string);
+
+  let arr = string.split("");
+
+  for (let i = 0; i < arr.length; i++) {
+    switch (arr[i]) {
+      case "a":
+        arr[i] = "A";
+        break;
+      case "e":
+        arr[i] = "E";
+        break;
+      case "i":
+        arr[i] = "I";
+        break;
+      case "o":
+        arr[i] = "O";
+        break;
+      case "u":
+        arr[i] = "U";
+        break;
+      default:
+        arr[i] = arr[i];
+    }
+  }
+  let str = arr.join("");
+  console.log(str);
+  return str;
+}
