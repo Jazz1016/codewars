@@ -415,3 +415,21 @@ function swap(string) {
   console.log(str);
   return str;
 }
+
+// An infinite number of shelves are arranged one above the other in a staggered fashion.
+// The cat can jump up to 3 shelves at the same time: from shelf 1 to shelf 2 or 4 (the cat cannot climb on the shelf directly above its head)
+
+function solution(start, finish) {
+  let num = finish - start;
+  let jumps = 0;
+  while (num > 0) {
+    if (num - 3 >= 0) {
+      num = num - 3;
+      jumps++;
+    } else if (num - 1 >= 0) {
+      num = num - 1;
+      jumps++;
+    }
+  }
+  return jumps;
+}
